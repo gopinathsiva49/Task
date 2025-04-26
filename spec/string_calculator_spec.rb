@@ -10,5 +10,10 @@ RSpec.describe StringCalculator do
     calculator = StringCalculator.new
     expect(calculator.add("1,2")).to eq(3)
   end
+
+  it "returns zero when only a comma exists" do
+    calculator = StringCalculator.new
+    expect(calculator.add(",")).to eq(0)
+  end
   
 end
